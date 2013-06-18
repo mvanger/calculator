@@ -14,6 +14,10 @@ def division(a,b)
   return a/b
 end
 
+def exponent(a,b)
+  return a ** b
+end
+
 def quadratic_equation1(a,b,c)
   return (-b + Math.sqrt((b**2) - (4*a*c)))/(2*a)
 end
@@ -41,6 +45,7 @@ add
 subtract
 multiply
 divide
+exponent
 quadratic equation
 length of hypotenuse
 area of circle
@@ -76,6 +81,12 @@ case function
       else
         puts "The quotient is " +division(a,b).to_s + "."
       end
+  when "exponent"
+    puts "What is the base?"
+    a = gets.chomp.to_f
+    puts "Raise to which power?"
+    b = gets.chomp.to_f
+    puts "The result is " + exponent(a,b).to_s + "."
   when "quadratic equation"
     puts "What is the first coefficient?"
     a = gets.chomp.to_f
